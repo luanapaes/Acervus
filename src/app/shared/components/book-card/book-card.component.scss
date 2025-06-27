@@ -1,0 +1,41 @@
+div {
+    width: 290px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+
+    img {
+        width: 100%;
+        border-radius: 12px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        margin-bottom: 10px;
+    }
+
+    h2,
+    p {
+        margin: 0;
+        width: 100%;
+        padding: 0 5px;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: #1d1d1d;
+        margin-top: 10px;
+
+    }
+
+    p {
+        font-size: 0.95rem;
+        color: #555;
+    }
+}
+
+@media (min-width: 360px) and (max-width: 430px) {
+    div{
+        width: 158px;
+
+    }
+}
