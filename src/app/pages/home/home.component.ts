@@ -4,11 +4,14 @@ import { BookCardComponent } from '../../shared/components/book-card/book-card.c
 import { CustomBook } from '../../shared/interfaces/custom-book';
 import { EventCarouselComponent } from "../../shared/components/event-carousel/event-carousel.component";
 import { FooterComponent } from "../../shared/components/footer/footer.component";
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeaderComponent, BookCardComponent, EventCarouselComponent, FooterComponent],
+  imports: [HeaderComponent, BookCardComponent, EventCarouselComponent, FooterComponent,
+    RouterLink
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
