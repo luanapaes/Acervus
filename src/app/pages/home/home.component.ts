@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { HeaderComponent } from "../../shared/components/header/header.component";
 import { BookCardComponent } from '../../shared/components/book-card/book-card.component';
 import { CustomBook } from '../../shared/interfaces/custom-book';
+import { EventCarouselComponent } from "../../shared/components/event-carousel/event-carousel.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeaderComponent, BookCardComponent],
+  imports: [HeaderComponent, BookCardComponent, EventCarouselComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
