@@ -21,6 +21,40 @@
 
             margin-top: 30px;
         }
+
+        .conheca {
+            display: flex;
+            flex-direction: column;
+            margin-top: 25px;
+            border-top: 0.3px solid #193235;
+
+            h2{
+                margin-bottom: 0;
+            }
+
+            .info {
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+                margin-top: 10px;
+
+                .emprestimos {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    span {
+                        background-color: #d8fbe2;
+                        padding: 5px;
+                        border-radius: 10px;
+
+                        &:hover{
+                            background-color: #cafbd8;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -31,8 +65,16 @@
             padding: 10px 15px;
             margin: 0;
 
-            h1{
+            h1 {
                 font-size: 1.1em;
+            }
+
+            .conheca .info {
+                flex-direction: column;
+
+                iframe {
+                    width: auto;
+                }
             }
         }
     }
