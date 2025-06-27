@@ -55,6 +55,31 @@
                     }
                 }
             }
+
+            .login-call {
+                background-color: #244B4F;
+                color: #ffffff;
+                text-align: center;
+                padding: 30px 20px;
+                margin-top: 40px;
+                border-radius: 8px;
+
+                button {
+                    background-color: #52b788;
+                    color: white;
+                    border: none;
+                    padding: 12px 20px;
+                    margin-top: 15px;
+                    font-weight: bold;
+                    border-radius: 6px;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease;
+
+                    &:hover {
+                        background-color: #40916c;
+                    }
+                }
+            }
         }
     }
 }
@@ -69,7 +94,7 @@
             h1 {
                 font-size: 1.1em;
             }
-            
+
             .conheca .info {
                 flex-direction: column;
 
@@ -82,17 +107,17 @@
 }
 
 @media screen and (max-width: 768px) {
-    .info{
+    .info {
         flex-direction: column !important;
 
-        iframe{
+        iframe {
             width: auto;
         }
     }
 }
 
 @media screen and (min-width: 1024px) {
-    .info{
+    .info {
         flex-direction: column;
     }
 }
