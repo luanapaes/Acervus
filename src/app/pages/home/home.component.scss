@@ -1,0 +1,39 @@
+.container {
+    main {
+        background-color: #ffff;
+        margin: 0 100px;
+        height: auto;
+        min-height: 400px;
+
+        padding: 15px 20px;
+        color: #193235;
+
+        border-radius: 5px;
+
+        h1 {
+            font-size: 1.4em;
+        }
+
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+
+            margin-top: 30px;
+        }
+    }
+}
+
+@media (min-width: 360px) and (max-width: 430px) {
+    .container {
+        main {
+            width: 100%;
+            padding: 10px 15px;
+            margin: 0;
+
+            h1{
+                font-size: 1.1em;
+            }
+        }
+    }
+}
