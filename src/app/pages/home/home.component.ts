@@ -3,11 +3,12 @@ import { HeaderComponent } from "../../shared/components/header/header.component
 import { BookCardComponent } from '../../shared/components/book-card/book-card.component';
 import { CustomBook } from '../../shared/interfaces/custom-book';
 import { EventCarouselComponent } from "../../shared/components/event-carousel/event-carousel.component";
+import { FooterComponent } from "../../shared/components/footer/footer.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeaderComponent, BookCardComponent, EventCarouselComponent],
+  imports: [HeaderComponent, BookCardComponent, EventCarouselComponent, FooterComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

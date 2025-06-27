@@ -17,6 +17,7 @@
         .main-content {
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
             gap: 40px;
 
             margin-top: 30px;
@@ -28,7 +29,7 @@
             margin-top: 25px;
             border-top: 0.3px solid #193235;
 
-            h2{
+            h2 {
                 margin-bottom: 0;
             }
 
@@ -48,7 +49,7 @@
                         padding: 5px;
                         border-radius: 10px;
 
-                        &:hover{
+                        &:hover {
                             background-color: #cafbd8;
                         }
                     }
@@ -61,14 +62,14 @@
 @media (min-width: 360px) and (max-width: 430px) {
     .container {
         main {
-            width: 100%;
+            width: auto;
             padding: 10px 15px;
             margin: 0;
 
             h1 {
                 font-size: 1.1em;
             }
-
+            
             .conheca .info {
                 flex-direction: column;
 
@@ -77,5 +78,21 @@
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .info{
+        flex-direction: column !important;
+
+        iframe{
+            width: auto;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .info{
+        flex-direction: column;
     }
 }
