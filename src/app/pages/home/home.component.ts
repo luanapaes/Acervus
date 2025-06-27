@@ -26,6 +26,21 @@ export class HomeComponent {
       name: "Biblioteca do Meio-Dia",
       description: "Livro de ficção científica que traz valiosas lições sobre escolhas.",
       image_url: "https://m.media-amazon.com/images/I/81iqH8dpjuL.jpg"
+    },
+    {
+      name: "Biblioteca da Meia-Noite",
+      description: "Livro de ficção científica que traz valiosas lições sobre escolhas.",
+      image_url: "https://m.media-amazon.com/images/I/81iqH8dpjuL.jpg"
+    },
+    {
+      name: "Bibliotecaria Louca",
+      description: "Livro de ficção científica que traz valiosas lições sobre escolhas.",
+      image_url: "https://m.media-amazon.com/images/I/81iqH8dpjuL.jpg"
+    },
+    {
+      name: "Biblioteca do Meio-Dia",
+      description: "Livro de ficção científica que traz valiosas lições sobre escolhas.",
+      image_url: "https://m.media-amazon.com/images/I/81iqH8dpjuL.jpg"
     }
   ]
 
