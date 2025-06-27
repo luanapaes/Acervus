@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+header {
+    height: 150px;
+    padding: 0 60px;
+    margin-left: 30px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    h1{
+        font-size: 1em;
+        text-transform: uppercase;
+        color: #e4dac2;
+        font-family: 'Montserrat';
+    }
+
+    img {
+        width: auto;
+        height: 100%;
+    }
+}
+
+@media (min-width: 360px) and (max-width: 430px) {
+    header{
+        margin: 0;
+        height: 100px;
+        padding: 0;
+
+        img{
+            width: 150px;
+            height: auto;
+        }
+
+        h1{
+            font-size: .6em;
+        }
+    }
+}
