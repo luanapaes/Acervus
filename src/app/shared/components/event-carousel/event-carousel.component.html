@@ -1,0 +1,11 @@
+<div class="carrossel">
+    <button class="seta" (click)="eventoAnterior()">&#x276E;</button>
+
+    <div class="evento-card">
+        <h3>{{ eventos[eventoAtual].titulo }}</h3>
+        <p>{{ eventos[eventoAtual].descricao }}</p>
+    </div>
+
+    <button class="seta" (click)="proximoEvento()">&#x276F;</button>
+</div>
+  
