@@ -1,0 +1,22 @@
+<div class="login-container">
+    <div class="logo-section">
+        <img src="../../../assets/acervus.png" alt="Logo Acervus" width="200px">
+    </div>
+
+    <div class="form-section">
+        <h2>Entrar na sua conta</h2>
+
+        <form [formGroup]="loginForm" (submit)="onSubmit()">
+            <input formControlName="email" type="email" placeholder="Email" required autofocus>
+            <input formControlName="password" type="password" placeholder="Senha" required>
+
+            <button type="submit">Fazer Login</button>
+
+            <p class="register-link">
+                Não tem conta?
+                <a routerLink="/cadastro">Cadastre-se</a>
+            </p>
+        </form>
+    </div>
+</div>
+  
