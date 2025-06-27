@@ -1,6 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { Book } from '../../interfaces/book';
-
 @Component({
   selector: 'app-book-card',
   standalone: true,
