@@ -5,11 +5,13 @@
         <h1>Nossos livros disponíveis para você</h1>
 
         <div class="main-content">
-            <app-book-card></app-book-card>
-            <app-book-card></app-book-card>
-            <app-book-card></app-book-card>
-            <app-book-card></app-book-card>
-            <app-book-card></app-book-card>
+            @for (book of bookArray; track book) {
+                <app-book-card
+                    [name]="book.name"
+                    [description]="book.description"
+                    [imageURL]="book.image_url"
+                ></app-book-card>
+            }
         </div>
     </main>
 </div>
