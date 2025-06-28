@@ -17,6 +17,8 @@ export class EmprestimoCardComponent {
   dataFinal!: Date;
   diasRestantes!: number;
   diasRestantesPositive!: number;
+  taxa = 1.30;
+  dividaEmprestimo!: number;
 
   constructor(public dialog: MatDialog) { }
   
@@ -26,6 +28,7 @@ export class EmprestimoCardComponent {
     
     // quando os dias passam de 7 ficam negativos então usei a função para deixalos positivos
     this.diasRestantesPositive = Math.abs(this.diasRestantes);
+    this.dividaEmprestimo = Math.abs(this.diasRestantes * this.taxa);
   }
   
 
