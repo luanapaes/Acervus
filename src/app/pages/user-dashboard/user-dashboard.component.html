@@ -1,24 +1,49 @@
 <div class="userdashboard-container">
-    <div class="logout">
-        <button>Sair</button>
-    </div>
+  <div class="logout">
+    <button>Sair</button>
+  </div>
 
-    <h1>Olá, Luana Paes!</h1>
+  <h1>Olá, Luana Paes!</h1>
 
-    <main>
-        <div class="emprestimos-atuais">
-            <h2>Emprestimos Atuais</h2>
+  <main>
+    <div class="emprestimos-atuais">
+      <h2>Emprestimos Atuais</h2>
 
-            <div class="emprestimos">
-                @if (arrayEmprestimos.length > 0) {
-                 @for (emprestimo of arrayEmprestimos; track emprestimo) {
-                   <app-emprestimo-card
-                    [nomeBook]="emprestimo.book_name"
-                    [dataInicialEmprestimo]="emprestimo.data_emprestimo"
-                   ></app-emprestimo-card>
-                 }
-                }
-            </div>
+      <div class="emprestimos">
+        @if (arrayEmprestimos.length > 0) {
+        @for (emprestimo of arrayEmprestimos; track emprestimo) {
+        <app-emprestimo-card [nomeBook]="emprestimo.book_name"
+          [dataInicialEmprestimo]="emprestimo.data_emprestimo"></app-emprestimo-card>
+        }
+        }
+      </div>
+
+      <div class="all-books">
+        <h2>Livros Disponíveis</h2>
+        <div class="main-content">
+          @for (book of booksPaginados; track book) {
+            <app-book-card 
+              [name]="book.name" 
+              [description]="book.description"
+              [imageURL]="book.image_url" 
+              title="Venha à biblioteca e faça seu empréstimo!"
+            ></app-book-card>
+          }
         </div>
-    </main>
+
+        <div class="btn-paginacao">
+          <button (click)="voltarPagina()" [disabled]="paginaAtual === 1">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button (click)="avancarPagina()" [disabled]="paginaAtual === totalPaginas">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <app-footer></app-footer>
+  </footer>
 </div>

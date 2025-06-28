@@ -1,13 +1,13 @@
-.userdashboard-container{
+.userdashboard-container {
     color: #f4eee2;
 
-    .logout{
+    .logout {
         display: flex;
         justify-content: end;
 
         padding: 10px 30px 0 0;
 
-        button{
+        button {
             width: 60px;
             height: 40px;
             border: none;
@@ -15,32 +15,65 @@
             transition: background-color .3s ease;
             color: #1c383b;
 
-            &:hover{
+            &:hover {
                 background-color: #f4eee2;
             }
         }
     }
 
-    h1{
+    h1 {
         padding-left: 5vw;
         font-size: 1.6em;
     }
 
-    main{
+    main {
         width: 90%;
         background-color: #f4eee2;
         color: #1c383b;
         margin: 0 auto;
-        padding: 20px;
+        padding: 20px 0 20px 3vw;
         margin-top: 40px;
 
         min-height: 400px;
         border-radius: 5px;
+        box-sizing: border-box;
 
-        .emprestimos-atuais .emprestimos{
+        .emprestimos-atuais .emprestimos {
             display: flex;
             flex-direction: column;
             gap: 10px;
+        }
+
+        .all-books {
+            margin-top: 5vh;
+            padding: 0 10px;
+
+            .main-content {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px 40px;
+
+                margin-top: 30px;
+            }
+
+            .btn-paginacao{
+                display: flex;
+                justify-content: space-between;
+                
+                width: 140px;
+                height: 5vh;
+
+                button{
+                    width: 60px;
+                    background-color: rgb(203, 232, 190);
+                    border: none;
+                    transition: background-color .3s ease;
+
+                    &:hover{
+                        background-color: rgb(185, 211, 173);
+                    }
+                }
+            }
         }
     }
 }

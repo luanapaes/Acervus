@@ -1,21 +1,27 @@
 import { Component, Input } from '@angular/core';
 import { Emprestimo } from '../../shared/interfaces/emprestimo';
 import { EmprestimoCardComponent } from "../../shared/components/emprestimo-card/emprestimo-card.component";
+import { CustomBook } from '../../shared/interfaces/custom-book';
+import { BookCardComponent } from "../../shared/components/book-card/book-card.component";
+import { FooterComponent } from "../../shared/components/footer/footer.component";
 
 @Component({
   selector: 'app-user-dashboard',
   standalone: true,
-  imports: [EmprestimoCardComponent],
+  imports: [EmprestimoCardComponent, BookCardComponent, FooterComponent],
   templateUrl: './user-dashboard.component.html',
   styleUrl: './user-dashboard.component.scss'
 })
 export class UserDashboardComponent {
   @Input() username: string = "";
+  booksPaginados: CustomBook[] = [];
+  paginaAtual: number = 1;
+
 
   ngOnInit() {
     this.ordenarEmprestimos();
+    this.atualizarPagina()
   }
-  
 
   arrayEmprestimos: Emprestimo[] = [
     {
@@ -66,5 +72,80 @@ export class UserDashboardComponent {
     const diffMs = dataFinal.getTime() - hoje.getTime();
     return Math.ceil(diffMs / (1000 * 60 * 60 * 24));
   }
-  
+
+  bookArray: CustomBook[] = [
+    {
+      name: "Biblioteca da Meia-Noite",
+      description: "Livro de ficção científica que traz valiosas lições sobre escolhas.",
+      image_url: "https://m.media-amazon.com/images/I/81iqH8dpjuL.jpg"
+    },
+    {
+      name: "Bibliotecaria Louca",
+      description: "Livro de ficção científica que traz valiosas lições sobre escolhas.",
+      image_url: "https://m.media-amazon.com/images/I/81iqH8dpjuL.jpg"
+    },
+    {
+      name: "Biblioteca do Meio-Dia",
+      description: "Livro de ficção científica que traz valiosas lições sobre escolhas.",
+      image_url: "https://m.media-amazon.com/images/I/81iqH8dpjuL.jpg"
+    },
+    {
+      name: "Biblioteca da Meia-Noite",
+      description: "Livro de ficção científica que traz valiosas lições sobre escolhas.",
+      image_url: "https://m.media-amazon.com/images/I/81iqH8dpjuL.jpg"
+    },
+    {
+      name: "Bibliotecaria Louca",
+      description: "Livro de ficção científica que traz valiosas lições sobre escolhas.",
+      image_url: "https://m.media-amazon.com/images/I/81iqH8dpjuL.jpg"
+    },
+    {
+      name: "Bibliotecaria Louca",
+      description: "Livro de ficção científica que traz valiosas lições sobre escolhas.",
+      image_url: "https://m.media-amazon.com/images/I/81iqH8dpjuL.jpg"
+    },
+    {
+      name: "Biblioteca do Meio-Dia",
+      description: "Livro de ficção científica que traz valiosas lições sobre escolhas.",
+      image_url: "https://m.media-amazon.com/images/I/81iqH8dpjuL.jpg"
+    }
+  ];
+
+  listItems(items: CustomBook[], pageActual: number, limitItems: number) {
+    let result: any = [];
+    let totalPage = Math.ceil(items.length / limitItems);
+    let count = (pageActual * limitItems) - limitItems;
+    let delimiter = count + limitItems;
+
+    if (pageActual <= totalPage) {
+      for (let i = count; i < delimiter; i++) {
+        result.push(items[i]);
+        count++;
+      }
+    }
+
+    return result
+  }
+
+  atualizarPagina() {
+    this.booksPaginados = this.listItems(this.bookArray, this.paginaAtual, this.limitPorPagina);
+  }  
+
+  limitPorPagina = 6;
+  totalPaginas = Math.ceil(this.bookArray.length / this.limitPorPagina);
+
+  avancarPagina() {
+    if (this.paginaAtual < this.totalPaginas) {
+      this.paginaAtual++;
+      this.atualizarPagina();
+    }
+  }
+
+  voltarPagina() {
+    if (this.paginaAtual > 1) {
+      this.paginaAtual--;
+      this.atualizarPagina();
+    }
+  }
+
 }
