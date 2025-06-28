@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,6 +10,7 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
+  router = inject(Router)
   
   loginForm = new FormGroup({
     email: new FormControl("", [
@@ -23,7 +25,7 @@ export class LoginComponent {
 
   onSubmit(){
     if(this.loginForm.valid){
-      console.log("Válido")
+      this.router.navigate(['userdashboard'])
     } else{
       console.log("Não válido")
     }
