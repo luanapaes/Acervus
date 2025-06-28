@@ -1,0 +1,32 @@
+<div class="emprestimo-card">
+    <div class="info">
+        <h1>{{nomeBook}}</h1>
+
+        <p>Livro emprestado em {{dataInicialEmprestimo | date: "dd/MM/yyyy"}}</p>
+        <p>Devolver em {{dataFinal | date: "dd/MM/yyyy"}}</p>
+
+        @if (diasRestantes < 0) {
+            <p class="alert attention">Emprestimo vencido há {{diasRestantesPositive}} dias <br> Dirija-se à biblioteca para realizar a devolução.</p>
+        } @else if (diasRestantes === 0) {
+         <p class="alert lastday">Último dia para a devolução do livro</p>
+        } @else {
+            <p class="alert ok">{{diasRestantes}} dias restantes</p>
+        }
+        
+    
+    </div>
+    
+    @if (diasRestantes < 0) {
+        <div class="btn">
+            <button disabled title="Dirija-se à biblioteca.">Renovar empréstimo</button>
+        </div>
+    } @else if(diasRestantes === 0){
+        <div class="btn">
+            <button title="Evite atrasos. Entregue ainda hoje ou renove seu empréstimo.">Renovar empréstimo</button>
+        </div>
+    } @else {
+        <div class="btn">
+            <button (click)="onClick()" title="Renovar empréstimo">Renovar empréstimo</button>
+        </div>
+    }
+</div>
