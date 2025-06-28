@@ -1,0 +1,46 @@
+.userdashboard-container{
+    color: #f4eee2;
+
+    .logout{
+        display: flex;
+        justify-content: end;
+
+        padding: 10px 30px 0 0;
+
+        button{
+            width: 60px;
+            height: 40px;
+            border: none;
+            border-radius: 20px;
+            transition: background-color .3s ease;
+            color: #1c383b;
+
+            &:hover{
+                background-color: #f4eee2;
+            }
+        }
+    }
+
+    h1{
+        padding-left: 5vw;
+        font-size: 1.6em;
+    }
+
+    main{
+        width: 90%;
+        background-color: #f4eee2;
+        color: #1c383b;
+        margin: 0 auto;
+        padding: 20px;
+        margin-top: 40px;
+
+        min-height: 400px;
+        border-radius: 5px;
+
+        .emprestimos-atuais .emprestimos{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+}
