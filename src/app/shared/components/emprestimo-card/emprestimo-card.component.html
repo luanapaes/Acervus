@@ -22,11 +22,11 @@
         </div>
     } @else if(diasRestantes === 0){
         <div class="btn">
-            <button title="Evite atrasos. Entregue ainda hoje ou renove seu empréstimo.">Renovar empréstimo</button>
+            <button (click)="openDialog()" title="Evite atrasos. Entregue ainda hoje ou renove seu empréstimo.">Renovar empréstimo</button>
         </div>
     } @else {
         <div class="btn">
-            <button (click)="onClick()" title="Renovar empréstimo">Renovar empréstimo</button>
+            <button (click)="openDialog()" title="Renovar empréstimo">Renovar empréstimo</button>
         </div>
     }
 </div>
