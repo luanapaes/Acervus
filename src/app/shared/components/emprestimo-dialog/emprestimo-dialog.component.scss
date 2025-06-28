@@ -1,0 +1,39 @@
+.dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.507);
+}
+
+.div-btn {
+    gap: 0 20px;
+
+    .btn {
+        height: 5vh;
+        cursor: pointer;
+    }
+
+    .cancel {
+        border: .6px solid rgb(117, 5, 5);
+        background-color: transparent;
+    }
+
+    .ok {
+        border: .6px solid rgb(18, 70, 2);
+        background-color: rgb(204, 250, 190);
+        transition: background-color .3s ease;
+
+        &:hover {
+            background-color: rgb(196, 239, 183);
+        }
+    }
+}
+
+@media (min-width: 360px) and (max-width: 430px) {
+    .dialog {
+        width: 90%;
+    }
+}

@@ -1,0 +1,21 @@
+<div class="dialog">
+    <h2 mat-dialog-title>Renovação de Empréstimo</h2>
+    <mat-dialog-content class="mat-typography">
+        <h3>Deseja renovar seu empréstimo do exemplar {{data.nomeLivro}}?</h3>
+    
+        <p class="informe">
+            <strong>Observação:</strong> Você pode renovar um livro até <strong>4 vezes</strong> dentro do período de
+            <strong>7 dias</strong>. Caso não deseje renovar, pedimos que devolva o exemplar dentro do prazo estabelecido.
+        </p>
+    
+        <p class="alert">
+            <strong>Atenção:</strong> Em caso de atraso na devolução, será cobrada uma multa de <strong>R$1,30 por
+                dia</strong>.
+        </p>
+    </mat-dialog-content>
+    
+    <mat-dialog-actions class="div-btn" align="end">
+        <button class="btn cancel" mat-button mat-dialog-close>Cancelar</button>
+        <button class="btn ok" mat-button [mat-dialog-close]="true" cdkFocusInitial>Renovar</button>
+    </mat-dialog-actions>
+</div>
