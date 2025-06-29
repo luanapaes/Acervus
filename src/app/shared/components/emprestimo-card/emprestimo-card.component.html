@@ -6,7 +6,11 @@
         <p>Devolver em {{dataFinal | date: "dd/MM/yyyy"}}</p>
 
         @if (diasRestantes < 0) {
-            <p class="alert attention">Emprestimo vencido há {{diasRestantesPositive}} dias <br> Dirija-se à biblioteca para realizar a devolução.</p>
+            <p class="alert attention">
+                Empréstimo vencido há {{ diasRestantesPositive }} {{ diasRestantesPositive === 1 ? 'dia' : 'dias' }}
+                <br> Dirija-se à biblioteca para realizar a devolução.
+                <br>Taxa a pagar {{dividaEmprestimo.toFixed(2)}}
+            </p>
         } @else if (diasRestantes === 0) {
          <p class="alert lastday">Último dia para a devolução do livro</p>
         } @else {
