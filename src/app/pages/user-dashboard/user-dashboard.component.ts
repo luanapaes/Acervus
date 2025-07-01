@@ -4,11 +4,12 @@ import { EmprestimoCardComponent } from "../../shared/components/emprestimo-card
 import { CustomBook } from '../../shared/interfaces/custom-book';
 import { BookCardComponent } from "../../shared/components/book-card/book-card.component";
 import { FooterComponent } from "../../shared/components/footer/footer.component";
+import { LogoutButtonComponent } from "../../shared/components/logout-button/logout-button.component";
 
 @Component({
   selector: 'app-user-dashboard',
   standalone: true,
-  imports: [EmprestimoCardComponent, BookCardComponent, FooterComponent],
+  imports: [EmprestimoCardComponent, BookCardComponent, FooterComponent, LogoutButtonComponent],
   templateUrl: './user-dashboard.component.html',
   styleUrl: './user-dashboard.component.scss'
 })
