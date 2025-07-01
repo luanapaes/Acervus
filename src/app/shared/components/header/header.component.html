@@ -1,4 +1,11 @@
 <header>
-    <img src="../../../../assets/acervus.png" alt="Logomarca da Acervus que contem uma ilustração de livro aberto com o nome Acervus abaixo">
-    <h1>Sua biblioteca na palma da mão</h1>
+    <div class="logo">
+        <img src="../../../../assets/acervus.png"
+            alt="Logomarca da Acervus que contem uma ilustração de livro aberto com o nome Acervus abaixo">
+        <h1>Sua biblioteca na palma da mão</h1>
+    </div>
+
+    <div class="logout" [ngClass]="isLogout ? 'view-logout' : 'hidden'">
+        <app-logout-button></app-logout-button>
+    </div>
 </header>

@@ -2,38 +2,53 @@
 
 header {
     height: 150px;
-    padding: 0 60px;
+    padding: 0 0 0 60px;
     margin-left: 30px;
 
     display: flex;
     flex-direction: row;
-    align-items: center;
+    justify-content: space-between;
 
-    h1{
-        font-size: 1em;
-        text-transform: uppercase;
-        color: #e4dac2;
-        font-family: 'Montserrat';
+    .logo {
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        h1 {
+            font-size: 1em;
+            text-transform: uppercase;
+            color: #e4dac2;
+            font-family: 'Montserrat';
+        }
+
+        img {
+            width: auto;
+            height: 100%;
+        }
     }
 
-    img {
-        width: auto;
-        height: 100%;
+    .view-logout{
+        display: block;
+    }
+
+    .hidden{
+        display: none;
     }
 }
 
 @media (min-width: 360px) and (max-width: 430px) {
-    header{
+    header {
         margin: 0;
         height: 100px;
         padding: 0;
 
-        img{
+        img {
             width: 150px;
             height: auto;
         }
 
-        h1{
+        h1 {
             font-size: .6em;
         }
     }
