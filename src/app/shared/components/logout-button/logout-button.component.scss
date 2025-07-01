@@ -1,0 +1,21 @@
+.logout {
+    display: flex;
+    justify-content: end;
+
+    padding: 10px 30px 0 0;
+    margin-top: 1vh;
+
+    button {
+        width: 60px;
+        height: 40px;
+        border: none;
+        border-radius: 20px;
+        transition: background-color .3s ease;
+        color: #1c383b;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #f4eee2;
+        }
+    }
+}
