@@ -1,0 +1,17 @@
+<div class="sidenav-container">
+    <button class="toggle-btn" (click)="toggleSidenav()">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <nav class="sidenav" [class.open]="isOpen">
+        <div>
+            <button (click)="closeSidenav()">
+                <i class="far fa-times-circle"></i>
+            </button>
+        </div>
+        <a [routerLink]="['/admdashboard']" routerLinkActive="active" (click)="closeSidenav()">Home</a>
+        <a [routerLink]="['leitores']" routerLinkActive="active" (click)="closeSidenav()">Leitores</a>
+        <a routerLink="['livros']" (click)="closeSidenav()">Livros</a>
+    </nav>
+</div>
+<router-outlet></router-outlet>
