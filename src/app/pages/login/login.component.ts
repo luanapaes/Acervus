@@ -12,10 +12,6 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
   router = inject(Router)
-
-  constructor(private titleService: Title){
-    this.titleService.setTitle("Faça Login");
-  }
   
   loginForm = new FormGroup({
     email: new FormControl("", [
