@@ -18,12 +18,16 @@ export class AppComponent {
     console.log("URL ativa: ", event.url);
 
     switch (event.url) {
-      case '/':
+      case '':
         titleService.setTitle("Acervus");
         break;
 
       case '/login':
         titleService.setTitle("Faça Login");
+        break;
+
+      case '/userdashboard':
+        titleService.setTitle("Área do Leitor");
         break;
       
       case '/admdashboard':
