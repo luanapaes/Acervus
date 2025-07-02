@@ -12,7 +12,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
   styleUrl: './left-sidebar.component.scss'
 })
 export class LeftSidebarComponent {
-  isOpen = true;
+  isOpen = false;
 
   toggleSidenav() {
     this.isOpen = !this.isOpen;
