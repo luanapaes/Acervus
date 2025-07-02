@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Title } from '@angular/platform-browser';
+import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -9,5 +11,25 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'acervus';
+  constructor(router: Router, titleService: Title){
+    router.events
+    .pipe(filter((event) => event instanceof NavigationEnd))
+    .subscribe((event: NavigationEnd | any) =>{
+    console.log("URL ativa: ", event.url);
+
+    switch (event.url) {
+      case '/':
+        titleService.setTitle("Acervus");
+        break;
+
+      case '/login':
+        titleService.setTitle("Faça Login");
+        break;
+      
+      case '/admdashboard':
+        titleService.setTitle("Área Adminstrativa");
+        break;
+    }
+    })
+  }
 }
