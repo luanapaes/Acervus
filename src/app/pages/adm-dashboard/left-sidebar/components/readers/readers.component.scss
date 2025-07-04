@@ -1,0 +1,11 @@
+@import '../../../../../shared/styles/variables.scss';
+
+.readers-container{
+    display: flex;
+    flex-direction: column;
+
+    h1{
+        font-weight: 500;
+        color: $primary-color;
+    }
+}
