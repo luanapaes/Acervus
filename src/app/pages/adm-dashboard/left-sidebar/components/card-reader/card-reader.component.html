@@ -1,0 +1,9 @@
+<div class="card-container">
+    <p>{{fullname}}</p>
+    <p>{{phone_number}}</p>
+    <p>{{email}}</p>
+    
+    @for (book of books; track book) {
+      <p>{{book.book_name}}</p>
+    }
+</div>
