@@ -1,0 +1,43 @@
+<div class="home-container">
+    <h1>Área Adm</h1>
+    <p>Gerencie sua biblioteca com facilidade e praticidade.</p>
+    
+    <div class="cards">
+        <div>
+            <h2>Leitores cadastrados</h2>
+            <p>125</p>
+        </div>
+        <div>
+            <h2>Livros cadastrados</h2>
+            <p>560</p>
+        </div>
+        <div>
+            <h2>Livros Emprestados</h2>
+            <p>347</p>
+        </div>
+        <div>
+            <h2>Empréstimos Vencidos</h2>
+            <p>89</p>
+        </div>
+    </div>
+
+    <main>
+        <div class="eventos">
+            <h2>Eventos</h2>
+            <p>Adicione e acompanhe atividades culturais, oficinas e outros eventos da biblioteca.</p>
+            <button title="Adicionar evento">
+                <i class="fas fa-plus-circle"></i>
+                Adicionar evento
+            </button>
+
+            <div class="eventos-cards">
+                @for (evento of eventos; track evento) {
+                  <app-evento-card
+                    [titleEvento]="evento.title"
+                    [description]="evento.description"
+                  ></app-evento-card>
+                }
+            </div>
+        </div>
+    </main>
+</div>
