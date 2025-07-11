@@ -1,0 +1,40 @@
+<h2 mat-dialog-title>Adicionar Evento</h2>
+<mat-dialog-content class="mat-typography">
+    <h3 style="margin: 0; font-weight: 500;">Deseja adicionar um novo evento?</h3>
+    <p style="margin-bottom: 0 !important; font-weight: 400;">
+        Preencha as informações abaixo para criar um novo evento.
+    </p>
+    <p style="margin-bottom: 20px !important; font-weight: 400;">
+        Inclua um título, horário, público e outros detalhes importantes.
+    </p>
+
+    <form [formGroup]="eventoForm">
+        <div class="form-inputs">
+            <label>
+                Título
+                <input 
+                    type="text" 
+                    formControlName="evento_title" 
+                    placeholder="Ex: Clube da Leitura" 
+                    required="true"
+                >
+            </label>
+
+            <label>
+                Descrição do Evento
+                <textarea 
+                    formControlName="evento_description"
+                    placeholder="Ex: Participe do nosso grupo de leitura! Começa Às 15h30" 
+                    required="true"
+                    rows="4"
+                ></textarea>
+            </label>
+        </div>
+    </form>
+
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancelar</button>
+    <button mat-button [mat-dialog-close]="true" cdkFocusInitial class="button-add" (click)="onSubmit()">Adicionar</button>
+</mat-dialog-actions>
