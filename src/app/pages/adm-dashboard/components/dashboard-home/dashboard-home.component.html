@@ -31,7 +31,7 @@
             </button>
 
             <div class="eventos-cards">
-                @for (evento of eventos(); track evento) {
+                @for (evento of eventos; track evento) {
                   <app-evento-card
                     [titleEvento]="evento.title"
                     [description]="evento.description"

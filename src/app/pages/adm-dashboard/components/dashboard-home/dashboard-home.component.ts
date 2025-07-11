@@ -14,7 +14,7 @@ import { EventoService } from '../../../../shared/services/evento.service';
 })
 export class DashboardHomeComponent {
   eventoService = inject(EventoService);
-  eventos = signal<Evento[]>([]);
+  eventos: Evento[] = [];
 
   constructor(public dialog: MatDialog){}
 
@@ -30,7 +30,9 @@ export class DashboardHomeComponent {
   }
 
   loadEventos(){
-    return this.eventoService.get();
+    return this.eventoService.get().map((evento) => {
+      this.eventos.push(evento)
+    })
   }
   
 }
