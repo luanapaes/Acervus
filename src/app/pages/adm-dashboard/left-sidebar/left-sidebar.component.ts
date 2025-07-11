@@ -7,7 +7,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-left-sidebar',
   standalone: true,
-  imports: [MatSidenavModule, MatButtonModule, RouterLink, RouterOutlet],
+  imports: [MatSidenavModule, MatButtonModule, RouterLink ],
   templateUrl: './left-sidebar.component.html',
   styleUrl: './left-sidebar.component.scss'
 })
