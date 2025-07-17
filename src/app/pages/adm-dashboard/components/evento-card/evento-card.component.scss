@@ -5,4 +5,40 @@ div{
 
     border: 1px solid #244B4F;
     padding: 20px;
+
+    h2{
+        margin: 0;
+    }
+
+    .options{
+        display: flex;
+        justify-content: end;
+        padding: 0;
+        gap: 20px;
+        border: none;
+
+        button{
+            border: none;
+            background-color: transparent;
+            margin-bottom: 10px;
+            transition: all .3s ease;
+
+            i{
+                font-size: 1.3em;
+            }
+
+            &:hover{
+                cursor: pointer;
+                transform: scale(1.1);
+            }
+        }
+
+        .fa-trash-alt{
+            color: rgb(172, 18, 18);
+        }
+
+        .fa-pencil-alt{
+            color: rgb(22, 22, 197);
+        }
+    }
 }
