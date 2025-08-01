@@ -1,0 +1,33 @@
+.title {
+    font-weight: 800;
+}
+
+.book-section {
+    h3 {
+        color: #244B4F;
+    }
+
+    h3,
+    p {
+        margin: 0;
+    }
+
+    .btn-paginator {
+        width: 33%;
+        display: flex;
+        gap: 20px;
+
+        margin-top: 15px;
+
+        button {
+            border: 1px solid #244B4F;
+            background-color: transparent;
+            color: #244B4F;
+
+            &:disabled {
+                opacity: 0.4;
+                cursor: not-allowed;
+            }
+        }
+    }
+}
