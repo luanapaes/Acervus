@@ -16,9 +16,7 @@ export class TitlePipe implements PipeTransform {
     return title.toLowerCase()
     .split(' ')
     .map((palavra, index) => {
-      console.log(palavra, index)
       if (index === 0 || !execoes.includes(palavra)){
-        console.log(palavra.charAt(0), palavra.slice(1), !execoes.includes(palavra))
         return palavra.charAt(0).toUpperCase() + palavra.slice(1);
       } else{
         return palavra;
