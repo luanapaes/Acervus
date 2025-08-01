@@ -1,0 +1,13 @@
+.container-leitores{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+app-leitor-panel {
+    flex: 1 1 calc(33.33% - 20px);
+    /* 3 por linha, considerando o gap */
+    box-sizing: border-box;
+    max-width: calc(33.33% - 20px);
+}
