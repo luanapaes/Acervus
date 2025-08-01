@@ -18,71 +18,71 @@ export class LeitoresComponent {
 
   leitores: Leitor[] = [
     {
-      fullname: "Luana Paes",
+      nome_completo: "Luana Paes",
       email: "luanapaes@ghotmail.com",
-      phone_number: "8190909090",
-      borrowed_book: [
+      numero_contato: "8190909090",
+      livros_emprestados: [
         {
-          book_name: "A menina que roubava livros",
-          book_description: "Livro passado na guerra fria",
-          loan_date: new Date("2025-07-20"),
+          nome: "A menina que roubava livros",
+          descricao: "Livro passado na guerra fria",
+          data_emprestimo: new Date("2025-07-20"),
           data_devolucao: new Date("2025-07-27")
         },
         {
-          book_name: "A menina que roubava pneus",
-          book_description: "Livro passado na guerra fria",
-          loan_date: new Date("2025-07-20"),
+          nome: "A menina que roubava pneus",
+          descricao: "Livro passado na guerra fria",
+          data_emprestimo: new Date("2025-07-20"),
           data_devolucao: new Date("2025-07-27")
         },
       ]
     },
     {
-      fullname: "Vinicius Santana",
+      nome_completo: "Vinicius Santana",
       email: "vinicius.sapdeveloper@sap.br",
-      phone_number: "8198989898",
-      borrowed_book: [
+      numero_contato: "8198989898",
+      livros_emprestados: [
         {
-          book_name: "Sap para iniciantes",
-          book_description: "Guia completo do sistema SAP",
-          loan_date: new Date("2025-07-20"),
+          nome: "Sap para iniciantes",
+          descricao: "Guia completo do sistema SAP",
+          data_emprestimo: new Date("2025-07-20"),
           data_devolucao: new Date("2025-07-27")
         }
       ]
     },
     {
-      fullname: "Jamilli Paes",
+      nome_completo: "Jamilli Paes",
       email: "jam_pedagogia@gmail.com",
-      phone_number: "8145656578",
-      borrowed_book: [
+      numero_contato: "8145656578",
+      livros_emprestados: [
         {
-          book_name: "Pedagogia para autistas",
-          book_description: "Aprenda como lidar com esses alunos de forma inclusiva.",
-          loan_date: new Date("2025-07-20"),
+          nome: "Pedagogia para autistas",
+          descricao: "Aprenda como lidar com esses alunos de forma inclusiva.",
+          data_emprestimo: new Date("2025-07-20"),
           data_devolucao: new Date("2025-07-27")
         },
         {
-          book_name: "Pedagogia na pática",
-          book_description: "Tudo sobre o curso de pedagogia, do conceito à aplicação.",
-          loan_date: new Date("2025-07-20"),
+          nome: "Pedagogia na pática",
+          descricao: "Tudo sobre o curso de pedagogia, do conceito à aplicação.",
+          data_emprestimo: new Date("2025-07-20"),
           data_devolucao: new Date("2025-07-27")
         },
       ]
     },
     {
-      fullname: "Jamilli Paes",
+      nome_completo: "Jamilli Paes",
       email: "jam_pedagogia@gmail.com",
-      phone_number: "8145656578",
-      borrowed_book: [
+      numero_contato: "8145656578",
+      livros_emprestados: [
         {
-          book_name: "Pedagogia para autistas",
-          book_description: "Aprenda como lidar com esses alunos de forma inclusiva.",
-          loan_date: new Date("2025-07-20"),
+          nome: "Pedagogia para autistas",
+          descricao: "Aprenda como lidar com esses alunos de forma inclusiva.",
+          data_emprestimo: new Date("2025-07-20"),
           data_devolucao: new Date("2025-07-27")
         },
         {
-          book_name: "Pedagogia na pática",
-          book_description: "Tudo sobre o curso de pedagogia, do conceito à aplicação.",
-          loan_date: new Date("2025-07-20"),
+          nome: "Pedagogia na pática",
+          descricao: "Tudo sobre o curso de pedagogia, do conceito à aplicação.",
+          data_emprestimo: new Date("2025-07-20"),
           data_devolucao: new Date("2025-07-27")
 
         },

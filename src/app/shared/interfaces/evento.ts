@@ -1,4 +1,4 @@
 export interface Evento {
-    title: string;
-    description: string;
+    titulo: string;
+    descricao: string;
 }

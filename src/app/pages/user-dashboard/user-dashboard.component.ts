@@ -14,7 +14,7 @@ import { LogoutButtonComponent } from "../../shared/components/logout-button/log
   styleUrl: './user-dashboard.component.scss'
 })
 export class UserDashboardComponent {
-  @Input() username: string = "";
+  @Input() usernome: string = "";
   booksPaginados: CustomBook[] = [];
   paginaAtual: number = 1;
 
@@ -26,15 +26,15 @@ export class UserDashboardComponent {
 
   arrayEmprestimos: Emprestimo[] = [
     {
-      book_name: "Biblioteca da Meia-Noite",
+      nome: "Biblioteca da Meia-Noite",
       data_emprestimo: new Date("2025-06-5")
     },
     {
-      book_name: "É Assim que Acaba",
+      nome: "É Assim que Acaba",
       data_emprestimo: new Date("2025-06-24")
     },
     {
-      book_name: "Coraline",
+      nome: "Coraline",
       data_emprestimo: new Date("2025-06-21")
     }
   ];
@@ -76,39 +76,39 @@ export class UserDashboardComponent {
 
   bookArray: CustomBook[] = [
     {
-      name: "Biblioteca da Meia-Noite",
-      description: "Livro de ficção científica que traz valiosas lições sobre escolhas.",
-      image_url: "https://m.media-amazon.com/images/I/81iqH8dpjuL.jpg"
+      nome: "Biblioteca da Meia-Noite",
+      descricao: "Livro de ficção científica que traz valiosas lições sobre escolhas.",
+      url_imagem: "https://m.media-amazon.com/images/I/81iqH8dpjuL.jpg"
     },
     {
-      name: "Bibliotecaria Louca",
-      description: "Livro de ficção científica que traz valiosas lições sobre escolhas.",
-      image_url: "https://m.media-amazon.com/images/I/81iqH8dpjuL.jpg"
+      nome: "Bibliotecaria Louca",
+      descricao: "Livro de ficção científica que traz valiosas lições sobre escolhas.",
+      url_imagem: "https://m.media-amazon.com/images/I/81iqH8dpjuL.jpg"
     },
     {
-      name: "Biblioteca do Meio-Dia",
-      description: "Livro de ficção científica que traz valiosas lições sobre escolhas.",
-      image_url: "https://m.media-amazon.com/images/I/81iqH8dpjuL.jpg"
+      nome: "Biblioteca do Meio-Dia",
+      descricao: "Livro de ficção científica que traz valiosas lições sobre escolhas.",
+      url_imagem: "https://m.media-amazon.com/images/I/81iqH8dpjuL.jpg"
     },
     {
-      name: "Biblioteca da Meia-Noite",
-      description: "Livro de ficção científica que traz valiosas lições sobre escolhas.",
-      image_url: "https://m.media-amazon.com/images/I/81iqH8dpjuL.jpg"
+      nome: "Biblioteca da Meia-Noite",
+      descricao: "Livro de ficção científica que traz valiosas lições sobre escolhas.",
+      url_imagem: "https://m.media-amazon.com/images/I/81iqH8dpjuL.jpg"
     },
     {
-      name: "Bibliotecaria Louca",
-      description: "Livro de ficção científica que traz valiosas lições sobre escolhas.",
-      image_url: "https://m.media-amazon.com/images/I/81iqH8dpjuL.jpg"
+      nome: "Bibliotecaria Louca",
+      descricao: "Livro de ficção científica que traz valiosas lições sobre escolhas.",
+      url_imagem: "https://m.media-amazon.com/images/I/81iqH8dpjuL.jpg"
     },
     {
-      name: "Bibliotecaria Louca",
-      description: "Livro de ficção científica que traz valiosas lições sobre escolhas.",
-      image_url: "https://m.media-amazon.com/images/I/81iqH8dpjuL.jpg"
+      nome: "Bibliotecaria Louca",
+      descricao: "Livro de ficção científica que traz valiosas lições sobre escolhas.",
+      url_imagem: "https://m.media-amazon.com/images/I/81iqH8dpjuL.jpg"
     },
     {
-      name: "Biblioteca do Meio-Dia",
-      description: "Livro de ficção científica que traz valiosas lições sobre escolhas.",
-      image_url: "https://m.media-amazon.com/images/I/81iqH8dpjuL.jpg"
+      nome: "Biblioteca do Meio-Dia",
+      descricao: "Livro de ficção científica que traz valiosas lições sobre escolhas.",
+      url_imagem: "https://m.media-amazon.com/images/I/81iqH8dpjuL.jpg"
     }
   ];
 

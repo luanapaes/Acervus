@@ -8,10 +8,10 @@
             
             @for (leitor of leitores; track leitor) {
                 <app-leitor-panel
-                 [fullname]="leitor.fullname"
+                 [nome_completo]="leitor.nome_completo"
                  [email]="leitor.email"
-                 [phone_number]="leitor.phone_number"
-                 [borrowed_book]="leitor.borrowed_book"
+                 [numero_contato]="leitor.numero_contato"
+                 [livros_emprestados]="leitor.livros_emprestados"
                 ></app-leitor-panel>
             }
 

@@ -15,10 +15,10 @@ import { TitlePipe } from '../../../../../shared/pipe/title-transform/title.pipe
 export class LeitorPanelComponent {
   @Input() panelOpenState = false;
   // informações do leitor
-  @Input() fullname: string = '';
+  @Input() nome_completo: string = '';
   @Input() email: string = '';
-  @Input() phone_number: string = '';
-  @Input() borrowed_book: BorrowedBook[] = [];
+  @Input() numero_contato: string = '';
+  @Input() livros_emprestados: BorrowedBook[] = [];
 
   bookArray: BorrowedBook[] = [];
 
@@ -29,7 +29,7 @@ export class LeitorPanelComponent {
   }
 
   avancar() {
-    if (this.livroAtual < this.borrowed_book.length - 1) {
+    if (this.livroAtual < this.livros_emprestados.length - 1) {
       this.livroAtual++;
     }
   }
@@ -41,7 +41,7 @@ export class LeitorPanelComponent {
   }
 
   loadBooks(){
-    this.borrowed_book.map((book) => {
+    this.livros_emprestados.map((book) => {
       this.bookArray.push(book)
     })
   }

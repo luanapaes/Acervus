@@ -1,8 +1,8 @@
 import { BorrowedBook } from "./livro-emprestado";
 
 export interface Leitor {
-    fullname: string;
+    nome_completo: string;
     email: string;
-    phone_number: string;
-    borrowed_book: BorrowedBook[];
+    numero_contato: string;
+    livros_emprestados: BorrowedBook[];
 }

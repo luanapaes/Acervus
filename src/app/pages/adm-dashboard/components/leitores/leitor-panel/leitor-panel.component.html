@@ -2,7 +2,7 @@
     <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
         <mat-expansion-panel-header>
             <mat-panel-title>
-                {{fullname}}
+                {{nome_completo}}
             </mat-panel-title>
         </mat-expansion-panel-header>
 
@@ -15,23 +15,23 @@
             <p>
                 <span class="title">
                     <i class="fas fa-phone" title="Icon de telefone"></i>
-                </span> {{phone_number | phone }}
+                </span> {{numero_contato | phone }}
             </p>
         </div>
 
         <hr>
 
         <div class="book-section">
-            @if (borrowed_book.length > 0) {
-                <h3>{{ borrowed_book[livroAtual].book_name | title }}</h3>
-                <p>{{ borrowed_book[livroAtual].book_description }}</p>
-                <p>Data do Empréstimo: {{ borrowed_book[livroAtual].loan_date | date: 'dd/MM/yyyy'}}</p>
-                <p>Data de Devolução: {{ borrowed_book[livroAtual].data_devolucao | date: 'dd/MM/yyyy'}}</p>
+            @if (livros_emprestados.length > 0) {
+                <h3>{{ livros_emprestados[livroAtual].nome | title }}</h3>
+                <p>{{ livros_emprestados[livroAtual].descricao }}</p>
+                <p>Data do Empréstimo: {{ livros_emprestados[livroAtual].data_emprestimo | date: 'dd/MM/yyyy'}}</p>
+                <p>Data de Devolução: {{ livros_emprestados[livroAtual].data_devolucao | date: 'dd/MM/yyyy'}}</p>
 
-                @if (borrowed_book.length > 1) {
+                @if (livros_emprestados.length > 1) {
                     <div class="btn-paginator">
                         <button (click)="voltar()" [disabled]="livroAtual === 0">◀</button>
-                        <button (click)="avancar()" [disabled]="livroAtual === borrowed_book.length - 1">▶</button>
+                        <button (click)="avancar()" [disabled]="livroAtual === livros_emprestados.length - 1">▶</button>
                     </div>
                 }
             }

@@ -1,5 +1,5 @@
 export interface CustomBook {
-    name: string;
-    description: string;
-    image_url: string;
+    nome: string;
+    descricao: string;
+    url_imagem: string;
 }

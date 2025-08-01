@@ -23,8 +23,8 @@ export class CreateEventoDialogComponent {
 
   
   eventoForm = new FormGroup({
-    evento_title: new FormControl('', Validators.required),
-    evento_description: new FormControl('', Validators.required)
+    titulo: new FormControl('', Validators.required),
+    descricao: new FormControl('', Validators.required)
   });
   
   openSnackBar(message: string) {
@@ -37,8 +37,8 @@ export class CreateEventoDialogComponent {
   onSubmit() {
     if (this.eventoForm.valid) {
       const evento: Evento = {
-        title: this.eventoForm.value.evento_title as string,
-        description: this.eventoForm.value.evento_description as string
+        titulo: this.eventoForm.value.titulo as string,
+        descricao: this.eventoForm.value.descricao as string
       }
       this.eventoService.create(evento);
       this.openSnackBar("Evento cadastrado com sucesso!")

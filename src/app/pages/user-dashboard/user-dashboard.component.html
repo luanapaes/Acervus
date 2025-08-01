@@ -9,7 +9,7 @@
       <div class="emprestimos">
         @if (arrayEmprestimos.length > 0) {
         @for (emprestimo of arrayEmprestimos; track emprestimo) {
-        <app-emprestimo-card [nomeBook]="emprestimo.book_name"
+        <app-emprestimo-card [nomeBook]="emprestimo.nome"
           [dataInicialEmprestimo]="emprestimo.data_emprestimo"></app-emprestimo-card>
         }
         }
@@ -20,9 +20,9 @@
         <div class="main-content">
           @for (book of booksPaginados; track book) {
             <app-book-card 
-              [name]="book.name" 
-              [description]="book.description"
-              [imageURL]="book.image_url" 
+              [name]="book.nome" 
+              [description]="book.descricao"
+              [imageURL]="book.url_imagem" 
               title="Venha à biblioteca e faça seu empréstimo!"
             ></app-book-card>
           }

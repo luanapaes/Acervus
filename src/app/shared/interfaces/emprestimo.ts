@@ -1,4 +1,4 @@
 export interface Emprestimo {
-    book_name: string; 
+    nome: string; 
     data_emprestimo: Date;
 }
