@@ -1,3 +1,20 @@
 <div>
     <h1>Gerenciamento dos Leitores</h1>
+
+    <main>
+        <h2>Há {{qtdLeitores()}} cadastrados</h2>
+        <div class="container-leitores">
+
+            
+            @for (leitor of leitores; track leitor) {
+                <app-leitor-panel
+                 [fullname]="leitor.fullname"
+                 [email]="leitor.email"
+                 [phone_number]="leitor.phone_number"
+                 [borrowed_book]="leitor.borrowed_book"
+                ></app-leitor-panel>
+            }
+
+        </div>
+    </main>
 </div>
