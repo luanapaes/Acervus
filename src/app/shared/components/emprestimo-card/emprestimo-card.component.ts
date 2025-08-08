@@ -1,5 +1,5 @@
-import { DatePipe } from '@angular/common';
-import { Component, inject, Inject, Input } from '@angular/core';
+import { CurrencyPipe, DatePipe } from '@angular/common';
+import { Component, inject, Input } from '@angular/core';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { EmprestimoDialogComponent } from '../emprestimo-dialog/emprestimo-dialog.component';
@@ -8,7 +8,7 @@ import { EmprestimoVencidoService } from '../../services/emprestimo-vencido.serv
 @Component({
   selector: 'app-emprestimo-card',
   standalone: true,
-  imports: [DatePipe, MatButtonModule, MatDialogModule],
+  imports: [DatePipe, MatButtonModule, MatDialogModule, CurrencyPipe],
   templateUrl: './emprestimo-card.component.html',
   styleUrl: './emprestimo-card.component.scss'
 })
@@ -30,7 +30,7 @@ export class EmprestimoCardComponent {
     
     // quando os dias passam de 7 ficam negativos então usei a função para deixalos positivos
     this.diasRestantesPositive = Math.abs(this.diasRestantes);
-    this.dividaEmprestimo = Math.abs(this.diasRestantes * this.taxa);
+    this.dividaEmprestimo = this.emprestimoVencidoService.calcularTaxa(this.diasRestantes)
   }
   
 
