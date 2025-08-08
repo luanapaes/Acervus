@@ -9,7 +9,7 @@
             <p class="alert attention">
                 Empréstimo vencido há {{ diasRestantesPositive }} {{ diasRestantesPositive === 1 ? 'dia' : 'dias' }}
                 <br> Dirija-se à biblioteca para realizar a devolução.
-                <br>Taxa a pagar {{dividaEmprestimo.toFixed(2)}}
+                <br>Taxa a pagar {{dividaEmprestimo.toFixed(2) | currency : 'BRL'}}
             </p>
         } @else if (diasRestantes === 0) {
          <p class="alert lastday">Último dia para a devolução do livro</p>
