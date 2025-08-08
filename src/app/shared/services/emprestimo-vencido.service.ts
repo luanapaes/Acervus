@@ -18,4 +18,8 @@ export class EmprestimoVencidoService {
     const diffMs = dataDevolucao.getTime() - hoje.getTime();
     return Math.ceil(diffMs / (1000 * 60 * 60 * 24));
   }
+
+  calcularTaxa(diasRestantes: number){
+    return Math.abs(diasRestantes * this.taxa);
+  }
 }
