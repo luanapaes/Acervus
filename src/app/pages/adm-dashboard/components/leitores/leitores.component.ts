@@ -25,8 +25,8 @@ export class LeitoresComponent {
         {
           nome: "A menina que roubava livros",
           descricao: "Livro passado na guerra fria",
-          data_emprestimo: new Date("2025-07-20"),
-          data_devolucao: new Date("2025-07-27")
+          data_emprestimo: new Date("2025-08-1"),
+          data_devolucao: new Date("2025-08-8")
         },
         {
           nome: "A menina que roubava pneus",
@@ -76,8 +76,8 @@ export class LeitoresComponent {
         {
           nome: "Pedagogia para autistas",
           descricao: "Aprenda como lidar com esses alunos de forma inclusiva.",
-          data_emprestimo: new Date("2025-07-20"),
-          data_devolucao: new Date("2025-07-27")
+          data_emprestimo: new Date("2025-08-05"),
+          data_devolucao: new Date("2025-08-15")
         },
         {
           nome: "Pedagogia na pática",
