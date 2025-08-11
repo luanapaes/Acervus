@@ -5,11 +5,16 @@ import { PhonePipe } from '../../../../../shared/pipe/phone-pipe/phone.pipe';
 import { CommonModule, DatePipe } from '@angular/common';
 import { TitlePipe } from '../../../../../shared/pipe/title-transform/title.pipe';
 import { EmprestimoVencidoService } from '../../../../../shared/services/emprestimo-vencido.service';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialog } from '@angular/material/dialog';
+import { RenovarEmprestimoDialogComponent } from '../../../../../shared/components/renovar-emprestimo-dialog/renovar-emprestimo-dialog.component';
 
 @Component({
   selector: 'app-leitor-panel',
   standalone: true,
-  imports: [MatExpansionModule, PhonePipe, DatePipe, CommonModule, TitlePipe],
+  imports: [MatExpansionModule, PhonePipe, DatePipe, CommonModule, TitlePipe,
+    MatButtonModule
+  ],
   templateUrl: './leitor-panel.component.html',
   styleUrl: './leitor-panel.component.scss'
 })
@@ -30,6 +35,17 @@ export class LeitorPanelComponent {
   
   bookArray: BorrowedBook[] = [];
   livroAtual = 0;
+
+  constructor(public dialog: MatDialog) { }
+
+  openDialog(enterAnimationDuration: string, exitAnimationDuration: string, bookName: string): void {
+    this.dialog.open(RenovarEmprestimoDialogComponent, {
+      width: '300px',
+      enterAnimationDuration,
+      exitAnimationDuration,
+      data: { bookName },
+    });
+  }
 
   ngOnInit(): void {
     this.loadBooks();
@@ -52,9 +68,6 @@ export class LeitorPanelComponent {
       let valorTaxaEmprstimo = this.emprestimoVencidoService.calcularTaxa(this.diasRestantesPositive[i]);
       this.valorTaxa.push(valorTaxaEmprstimo);
     }
-
-    console.log(this.diasRestantesPositive)
-
   }
 
   avancar() {

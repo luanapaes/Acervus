@@ -30,4 +30,18 @@
             }
         }
     }
+
+    .btn-emprestimos-container {
+        display: flex;
+        gap: 8px;
+        margin-top: 5px;
+
+        button {
+            height: 30px;
+            border: 1px solid #244B4F;
+            background-color: transparent;
+            color: #0c181a;
+            cursor: pointer;
+        }
+    }
 }

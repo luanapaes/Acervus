@@ -30,12 +30,17 @@
                 <p>Empréstimo vencido em {{ livros_emprestados[livroAtual].data_devolucao |date:'dd/MM/yyyy' }}</p>
                 <p class="text-vencimento">{{diasRestantesPositive[livroAtual]}} dia(s) em atraso.</p>
                 <p>Taxa a pagar {{valorTaxa[livroAtual] | currency : 'BRL'}}</p>
+                <div class="btn-emprestimos-container">
+                    <button (click)="openDialog('0ms', '0ms', livros_emprestados[livroAtual].nome)">Renovar empréstimo</button>
+                    <button>Fechar empréstimo</button>
+                </div>
                 } @else if (diasRestantes[livroAtual] === 0) {
                     <p class="alert lastday">Último dia para a devolução do livro</p>
+                    <button (click)="openDialog('0ms', '0ms', livros_emprestados[livroAtual].nome)">Renovar empréstimo</button>
                 } @else {
                     <p class="alert ok">{{ diasRestantes[livroAtual] }} dias restantes</p>
                 }
-            
+        
                 @if (livros_emprestados.length > 1) {
                     <div class="btn-paginator">
                         <button (click)="voltar()" [disabled]="livroAtual === 0">◀</button>
