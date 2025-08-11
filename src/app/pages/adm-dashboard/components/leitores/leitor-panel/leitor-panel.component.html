@@ -23,11 +23,19 @@
 
         <div class="book-section">
             @if (livros_emprestados.length > 0) {
-                <h3>{{ livros_emprestados[livroAtual].nome | title }}</h3>
-                <p>{{ livros_emprestados[livroAtual].descricao }}</p>
-                <p>Data do Empréstimo: {{ livros_emprestados[livroAtual].data_emprestimo | date: 'dd/MM/yyyy'}}</p>
-                <p>Data de Devolução: {{ livros_emprestados[livroAtual].data_devolucao | date: 'dd/MM/yyyy'}}</p>
-
+            <h3>{{ livros_emprestados[livroAtual].nome | title }}</h3>
+            <p>Data do Empréstimo: {{ livros_emprestados[livroAtual].data_emprestimo | date: 'dd/MM/yyyy' }}</p>
+            
+            @if (diasRestantes[livroAtual] < 0) { 
+                <p>Empréstimo vencido em {{ livros_emprestados[livroAtual].data_devolucao |date:'dd/MM/yyyy' }}</p>
+                <p class="text-vencimento">{{diasRestantesPositive[livroAtual]}} dia(s) em atraso.</p>
+                <p>Taxa a pagar {{valorTaxa[livroAtual] | currency : 'BRL'}}</p>
+                } @else if (diasRestantes[livroAtual] === 0) {
+                    <p class="alert lastday">Último dia para a devolução do livro</p>
+                } @else {
+                    <p class="alert ok">{{ diasRestantes[livroAtual] }} dias restantes</p>
+                }
+            
                 @if (livros_emprestados.length > 1) {
                     <div class="btn-paginator">
                         <button (click)="voltar()" [disabled]="livroAtual === 0">◀</button>
