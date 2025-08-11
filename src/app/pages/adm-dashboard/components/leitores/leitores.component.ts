@@ -34,6 +34,12 @@ export class LeitoresComponent {
           data_emprestimo: new Date("2025-07-20"),
           data_devolucao: new Date("2025-07-27")
         },
+        {
+          nome: "A menina que roubava pneus",
+          descricao: "Livro passado na guerra fria",
+          data_emprestimo: new Date("2025-08-11"),
+          data_devolucao: new Date("2025-08-11")
+        },
       ]
     },
     {
